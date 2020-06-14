@@ -37,7 +37,7 @@ def game():
     if str(lol_3) == str(dict_y[coutres[ssx]]):
         messagebox.showinfo('Крутой', 'Поздравляю')
     else:
-        messagebox.showerror('Не то', 'Попробуй еще раз')
+        messagebox.showerror('Не то', f'Попробуй еще раз. Правильный ответ {dict_y[coutres[ssx]]}')
 for elem in bs.find_all('td'):
     coutres_sity.append(elem.text)
     
