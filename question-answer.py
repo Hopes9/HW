@@ -22,13 +22,11 @@ def clicked():
         dfd = str(dfd)
         dfd = dfd.title()               
         messagebox.showinfo('Ответ', f'Столица государства {dfd}: {dict_y[dfd]}') 
-        
     except:
         dfd = txt.get()
         dfd = str(dfd)
         dfd = dfd.title()
         lol_2 = simpledialog.askstring("Походу чего-то нет", "Введите город:", show='')
-        print(dfd)
         dict_y[dfd] = lol_2
 def clicked_2():
     messagebox.showinfo('Вы точно хотите выйти ?', 'Точно ?')
