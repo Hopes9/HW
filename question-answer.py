@@ -1,7 +1,6 @@
 from bs4 import BeautifulSoup
-from tkinter import *  
-from tkinter import messagebox  
-from tkinter import simpledialog  
+from tkinter import messagebox, simpledialog, Label, Button, Entry, Tk
+
 import requests
 import random
 
@@ -19,12 +18,18 @@ dict_y = {}
 
 def clicked():
     try:
-               
-        messagebox.showinfo('Ответ', f'Столица государства {txt.get()}: {dict_y[txt.get()]}') 
+        dfd = txt.get()
+        dfd = str(dfd)
+        dfd = dfd.title()               
+        messagebox.showinfo('Ответ', f'Столица государства {dfd}: {dict_y[dfd]}') 
+        
     except:
-        lol = simpledialog.askstring("Походу чего-то нет", "Введите страну:", show='')
+        dfd = txt.get()
+        dfd = str(dfd)
+        dfd = dfd.title()
         lol_2 = simpledialog.askstring("Походу чего-то нет", "Введите город:", show='')
-        dict_y[lol] = lol_2
+        print(dfd)
+        dict_y[dfd] = lol_2
 def clicked_2():
     messagebox.showinfo('Вы точно хотите выйти ?', 'Точно ?')
     window.quit()
